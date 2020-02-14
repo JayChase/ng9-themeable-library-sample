@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+@import 'partials/test';
+
+@mixin test-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  .test {
+    background: mat-color($primary);
+  }
+
+  .square {
+    @include square();
+  }
+}
